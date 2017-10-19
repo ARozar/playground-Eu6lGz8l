@@ -1,4 +1,25 @@
-# Welcome!
+#Intro
+
+## Overview
+
+
+## Breaking things down
+
+### Choosing our pivot
+
+### Positioning our Pivot
+
+### Divide and conquer! Sorting our partitions.
+
+## Putting it all together
+
+## Performance
+### Average
+
+### Best case
+
+### Worst case
+
 
 This C# template lets you get started quickly with a simple one-page playground.
 
