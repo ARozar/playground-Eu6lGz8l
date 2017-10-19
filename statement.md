@@ -128,6 +128,8 @@ So the bulk of the work done in each partioning of the array will involve
 2. ensuring the pivot value ends up in the right position
 3. taking note of the position of the pivot value once it has been correctly placed
  
+
+```C# runnable
 class Hello 
 {
     static void Main() 
