@@ -1,28 +1,22 @@
 #Intro
+Quick sort is an algorithm that is know for its memory efficiency and good overall performance.  Though most real world programming tasks will not require you to implement quick sort there are many lessons that can be learned based on the approach that it takes and the considerations that one must have when using it.
 
-## Overview
+Quicksort is a divide and conquer algorithm that partitions items in an array and then performs its sort operation by recursively calling its partition function on increasingly smaller partitions until all of the items are sorted.
 
 
 ## Breaking things down
+At the heart of a Quicksort implementation is a partition function that operates on an array passed to it from a start and ending index specified.  What we refer to as the current partition is the items in the array between the supplied start and end index values.
 
-### Choosing our pivot
+Each time the partition function is called we 
+1. Choose a pivot value that is an index between the start and end index passed to our partition function.
+2. Move all items in the current partition that are lower in value than our pivot to the left of the pivot.
+3. Move all items in the current partition that are higher in value than our pivot to the right of the pivot.
+4. When this is done we take note of the position of the pivot value.
+5. We then call our partition function on the slice of the array that is made of the items to the left of the array and on all the items on the right of the array.
 
-### Positioning our Pivot
+We keep on calling our partition function until all the elements are sorted.
 
-### Divide and conquer! Sorting our partitions.
-
-## Putting it all together
-
-## Performance
-### Average
-
-### Best case
-
-### Worst case
-
-
-This C# template lets you get started quickly with a simple one-page playground.
-
+### Try running the following code to see the algorithm in action.
 ```C# runnable
 // { autofold
 using System;
@@ -121,4 +115,30 @@ class Hello
         }
 // }
 ```
+
+### Choosing our pivot
+
+
+
+### Positioning our Pivot
+
+### Divide and conquer! Sorting our partitions.
+
+## Putting it all together
+
+## Performance
+### Average
+
+### Best case
+
+### Worst case
+
+### Other things to consider
+//we control the pivot value
+//memory cache
+
+
+This C# template lets you get started quickly with a simple one-page playground.
+
+
 
