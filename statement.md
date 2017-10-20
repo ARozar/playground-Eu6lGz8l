@@ -1,4 +1,4 @@
-#Intro
+# Intro
 Quick sort is an algorithm that is know for its memory efficiency and good overall performance.  Though most real world programming tasks will not require you to implement quick sort there are many lessons that can be learned based on the approach that it takes and the considerations that one must have when using it.
 
 Quicksort is a divide and conquer algorithm that partitions items in an array and then performs its sort operation by recursively calling its partition function on increasingly smaller partitions until all of the items are sorted.
