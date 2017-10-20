@@ -258,7 +258,9 @@ class Hello
 ```
 
 ### Divide and conquer! Sorting our partitions.
+After positioning all the elements in our partition to the left and right of our pivot and taking note of the new index of the pivot (remember that the pivot value should now be in the correct position) we call our partition function again on two slices of the current partition that we are sorting, the subset of our partion that is to the left (all the values smaller than our pivot) and items to the right (all the items that are larger than our pivot).
 
+One thing to note is that --//guard//
 ## Putting it all together
 
 ## Performance
