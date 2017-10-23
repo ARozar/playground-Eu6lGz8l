@@ -118,11 +118,11 @@ class Hello
 ```
 The most important thing to note here is everytime the partition function is called the approach that is taken results in the pivot value being placed in the correct position.
 
-### Choosing our pivot
+### Partitioning part one -  Choosing our pivot
 In this tutorial we will choose our pivot by generating a random number between the start and end values of each partition.
 We could equally do something such as choose the middle value of the partition.  I real life the implementation of this would be determined by the characteristics of the data that we were processing.
 
-### Positioning our Pivot
+### Partitioning part two - Positioning our items and our Pivot
 So the bulk of the work done in each partioning of the array will involve 
 1. comparing the other items in our current partition
 2. ensuring the pivot value ends up in the right position
