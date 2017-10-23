@@ -128,6 +128,8 @@ So the bulk of the work done in each partioning of the array will involve
 2. ensuring the pivot value ends up in the right position
 3. taking note of the position of the pivot value once it has been correctly placed
  
+//we move to the end of the array.  That way we don't have to move it every time we find something smaller than it
+//create rank variable.  We will assume that none of the item are smaller than our pivot and for every item found that is we will increment //the rank value by one.
 
 ```C# runnable
 class Hello 
