@@ -128,8 +128,10 @@ So the bulk of the work done in each partioning of the array will involve
 2. ensuring the pivot value ends up in the right position
 3. taking note of the position of the pivot value once it has been correctly placed
  
-//we move to the end of the array.  That way we don't have to move it every time we find something smaller than it
-//create rank variable.  We will assume that none of the item are smaller than our pivot and for every item found that is we will increment //the rank value by one.
+The first thing we are doing is to move to the pivot value to the  end of the array.  That way we don't have to move it every time we find something smaller than it.  We then create a variable (called `pivotRank` in our example) that will track every time we find and move an item that is smaller than our pivot value to the left of our pivot.  Once our partition function has gone through every item in the current partition except from our pivot value we the `pivotRank` variable should represent the correct position of our pivot value.  So we can now take it from the end of the current partition and move it to its correct place.  Once we have done this we can return the value of the `pivotRank` which will now be used to work out call our partition function on the items that are less than and greater than our `pivotRank`.
+
+
+//increment the rank value by one.
 
 ```C# runnable
 class Hello 
