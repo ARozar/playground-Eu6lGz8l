@@ -131,15 +131,9 @@ The first thing we are doing is to move to the pivot value to the  end of the ar
 
 Once our partition function has gone through every item in the current partition except from our pivot value we the `pivotRank` variable should represent the correct position of our pivot value.  So we can now take it from the end of the current partition and move it to its correct place.  Once we have done this we can return the value of the `pivotRank` which will now be used to work out call our partition function on the items that are less than and greater than our `pivotRank`.
 
-The use of the `pivotrank` here is one of the ways in which our implementation differs from the high level thought process behind the algorithm.  For example, though we wish to move elements to the left and right of our pivot value what we acually do is:
+The use of the `pivotrank` here is one of the ways in which our implementation differs from the high level thought process behind the algorithm.  Though a high level description talks about moving elements to the left and right of the pivot, we never actually need to move items to the right. By moving the pivot to the end of the current partition, tracking the `pivotrank` and swapping the pivot with the item at the index of the pivot rank we ensure that all items that are greater than our pivot are on the logical right of our pivot.
 
-1. move the pivot to the end of the current partition.
-2. move elements that are less than our pivot to the front of the current partition (i.e logically left of our pivot)
-3. count how many times we do this (i.e the `pivotrank` variable)
-4. after looping over all elements in the current partition we move the pivotvalue to the index in the partition equal to the `pivotrank`
-5. our pivot is in the right place, we never actually move items that are greater than it to the logical right of it.
-
-//increment the rank value by one.
+//see it in action...
 
 ```C# runnable
 class Hello 
