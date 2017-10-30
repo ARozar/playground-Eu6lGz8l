@@ -128,7 +128,9 @@ So the bulk of the work done in each partioning of the array will involve
 2. ensuring the pivot value ends up in the right position
 3. taking note of the position of the pivot value once it has been correctly placed
  
-The first thing we are doing is to move to the pivot value to the  end of the array.  That way we don't have to move it every time we find something smaller than it.  We then create a variable (called `pivotRank` in our example) that will track every time we find and move an item that is smaller than our pivot value to the left of our pivot.  Once our partition function has gone through every item in the current partition except from our pivot value we the `pivotRank` variable should represent the correct position of our pivot value.  So we can now take it from the end of the current partition and move it to its correct place.  Once we have done this we can return the value of the `pivotRank` which will now be used to work out call our partition function on the items that are less than and greater than our `pivotRank`.
+The first thing we are doing is to move to the pivot value to the  end of the array.  That way we don't have to move it every time we find something smaller than it.  We then create a variable (called `pivotRank` in our example) that will track every time we find and move an item that is smaller than our pivot value to the left of our pivot.  I the case of our approach this means each time we find an item that is smaller than our pivot value we swap its position with the `pivotrank` variable then increment the `pivotrank` value by one.
+
+Once our partition function has gone through every item in the current partition except from our pivot value we the `pivotRank` variable should represent the correct position of our pivot value.  So we can now take it from the end of the current partition and move it to its correct place.  Once we have done this we can return the value of the `pivotRank` which will now be used to work out call our partition function on the items that are less than and greater than our `pivotRank`.
 
 
 //increment the rank value by one.
