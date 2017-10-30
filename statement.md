@@ -1,11 +1,10 @@
 # Intro
-Quick sort is an algorithm that is know for its memory efficiency and good overall performance.  Though most real world programming tasks will not require you to implement quick sort there are many lessons that can be learned based on the approach that it takes and the considerations that one must have when using it.
+Quick sort is an algorithm that is known for its memory efficiency and good overall performance, particularly on larger unstructured datasets.  Though most real world programming tasks will not require you to implement quick sort there are many lessons that can be learned based on the approach that it takes and the considerations that one must have when using it.
 
 Quicksort is a divide and conquer algorithm that partitions items in an array and then performs its sort operation by recursively calling its partition function on increasingly smaller partitions until all of the items are sorted.
 
-
 ## Breaking things down
-At the heart of a Quicksort implementation is a partition function that operates on an array passed to it from a start and ending index specified.  What we refer to as the current partition is the items in the array between the supplied start and end index values.
+At the heart of a Quicksort implementation is a partition function that operates on an array passed to it from a start and ending index specified.  What we refer to as the current partition are the items in the array between the supplied start and end index values.
 
 Each time the partition function is called we 
 1. Choose a pivot value that is an index between the start and end index passed to our partition function.
@@ -116,7 +115,7 @@ class Hello
         }
 // }
 ```
-The most important thing to note here is everytime the partition function is called the approach that is taken results in the pivot value being placed in the correct position.
+The most important thing to note here is everytime the partition function is called the approach that is taken results in the pivot value being placed in the correct position.  It should be noted the five steps mentioned above are a high level description of what we look to do.  The actual implementation to achieve these five steps will be slightly different.
 
 ### Partitioning part one -  Choosing our pivot
 In this tutorial we will choose our pivot by generating a random number between the start and end values of each partition.
@@ -132,6 +131,13 @@ The first thing we are doing is to move to the pivot value to the  end of the ar
 
 Once our partition function has gone through every item in the current partition except from our pivot value we the `pivotRank` variable should represent the correct position of our pivot value.  So we can now take it from the end of the current partition and move it to its correct place.  Once we have done this we can return the value of the `pivotRank` which will now be used to work out call our partition function on the items that are less than and greater than our `pivotRank`.
 
+The use of the `pivotrank` here is one of the ways in which our implementation differs from the high level thought process behind the algorithm.  For example, though we wish to move elements to the left and right of our pivot value what we acually do is:
+
+1. move the pivot to the end of the current partition.
+2. move elements that are less than our pivot to the front of the current partition (i.e logically left of our pivot)
+3. count how many times we do this (i.e the `pivotrank` variable)
+4. after looping over all elements in the current partition we move the pivotvalue to the index in the partition equal to the `pivotrank`
+5. our pivot is in the right place, we never actually move items that are greater than it to the logical right of it.
 
 //increment the rank value by one.
 
