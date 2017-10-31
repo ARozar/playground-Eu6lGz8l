@@ -153,8 +153,6 @@ class Hello
             Console.WriteLine($"{Environment.NewLine}Item with value {items[postionedPivotIndex]} moved to position {postionedPivotIndex+1}");
 
             Console.WriteLine(string.Join(",",items));
-
-// { autofold
     }
                 public static int positionPivot(int[] itemsToSort, int startPosition, int endPosition, int pivotIndex)
             {
@@ -188,6 +186,7 @@ class Hello
                 //our pivot is now in the correct position
                 return currentRank;
             }
+// { autofold            
             private static void Swap(int[] items, int left, int right)
             {
                 if (left != right)
