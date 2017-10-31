@@ -150,7 +150,7 @@ class Hello
 
             int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
 
-            Console.WriteLine($"Item with value {items[pivotIndex]} moved to position {postionedPivotIndex}")
+            Console.WriteLine($"Item with value {items[pivotIndex]} moved to position {postionedPivotIndex}");
 
             Console.WriteLine(string.Join(",",items));
 
