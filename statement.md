@@ -143,12 +143,15 @@ class Hello
     static void Main() 
     {
 // }
+            var items = new int[] { 4,5,9,1,7,10,2,8,3,6};
 
-           var items = new int[] { 4,5,9,1,7,10,2,8,3,6};
-
+            Random _pivotRng = new Random();
+            
+            int pivotIndex = _pivotRng.Next(startPosition, endPosition);
+            
             Console.WriteLine($"About to sort {string.Join(",",items)}{Environment.NewLine}");
 
-            new QuickSort().Sort(items);
+            int postionedPivotIndex = positionPivot(items, 0, items.Length, pivotIndex);
 
             Console.WriteLine(string.Join(",",items));
 
@@ -178,6 +181,7 @@ class Hello
 
                     if (currentItem < pivotValue)
                     {
+                        Console.WriteLine($"Moving item with value { currentItem } to position {currentRank}");
                         Swap(itemsToSort, i, currentRank);
                         currentRank += 1;
                     }
