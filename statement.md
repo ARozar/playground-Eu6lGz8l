@@ -147,7 +147,7 @@ class Hello
 
             Random _pivotRng = new Random();
             
-            int pivotIndex = _pivotRng.Next(startPosition, endPosition);
+            int pivotIndex = _pivotRng.Next(0, items.Length);
             
             Console.WriteLine($"About to sort {string.Join(",",items)}{Environment.NewLine}");
 
