@@ -188,7 +188,7 @@ class Hello
                 //our pivot is now in the correct position
                 return currentRank;
             }
-            private void Swap(int[] items, int left, int right)
+            private static void Swap(int[] items, int left, int right)
             {
                 if (left != right)
                 {
