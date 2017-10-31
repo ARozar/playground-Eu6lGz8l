@@ -146,9 +146,11 @@ class Hello
             
             int pivotIndex = _pivotRng.Next(0, items.Length);
             
-            Console.WriteLine($"Chose item with value {items[pivotIndex]}{Environment.NewLine}");
+            Console.WriteLine($"{Environment.NewLine}Chose item with value {items[pivotIndex]}{Environment.NewLine}");
 
             int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
+
+            Console.WriteLine($"Item with value {items[pivotIndex]} moved to position {postionedPivotIndex}")
 
             Console.WriteLine(string.Join(",",items));
 
