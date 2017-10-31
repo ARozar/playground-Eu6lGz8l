@@ -136,6 +136,8 @@ The use of the `pivotrank` here is one of the ways in which our implementation d
 //see it in action...
 
 ```C# runnable
+// { autofold
+using System;
 class Hello 
 {
     static void Main() 
