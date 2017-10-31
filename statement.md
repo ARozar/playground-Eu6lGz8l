@@ -146,7 +146,7 @@ class Hello
             
             int pivotIndex = _pivotRng.Next(0, items.Length);
             
-            Console.WriteLine($"About to sort {string.Join(",",items)}{Environment.NewLine}");
+            Console.WriteLine($"Chose item with value {items[pivotIndex]}{Environment.NewLine}");
 
             int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
 
