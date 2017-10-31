@@ -35,9 +35,6 @@ class Hello
 
             Console.WriteLine(string.Join(",",items));
 
-            Console.ReadLine();
-
-
 // { autofold
     }
 }
@@ -154,9 +151,6 @@ class Hello
             int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
 
             Console.WriteLine(string.Join(",",items));
-
-            Console.ReadLine();
-
 
 // { autofold
     }
