@@ -147,21 +147,21 @@ class Hello
             int pivotIndex = _pivotRng.Next(0, items.Length);
             
             Console.WriteLine($"{Environment.NewLine}Chose item with value {items[pivotIndex]}{Environment.NewLine}");
-
+            //now position our items around the pivot
             int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
 
-            Console.WriteLine($"{Environment.NewLine}Item with value {items[postionedPivotIndex]} moved to position {postionedPivotIndex+1}");
+            Console.WriteLine($"{Environment.NewLine}Item with value {items[postionedPivotIndex]} moved to position {postionedPivotIndex + 1}");
 
             Console.WriteLine(string.Join(",",items));
     }
                 public static int positionPivot(int[] itemsToSort, int startPosition, int endPosition, int pivotIndex)
             {
-                //get the actual value of the item we are pivoting around
+                //get the actual value of the item we are pivoting around so that we can do comparisons
                 int pivotValue = itemsToSort[pivotIndex];
                 //move our pivotItem to the end.
                 Swap(itemsToSort, pivotIndex, endPosition);
 
-                //Get the start of the chuck of the items that we are sorting.
+                //Get the start of the partition of the items that we are sorting.
                 //items less than our pivot item will be moved here
                 //every time we do this we increment this value
                 //by the time we have gone through every value in the current chunk we are sorting
