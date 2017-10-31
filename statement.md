@@ -144,14 +144,14 @@ class Hello
     {
 // }
             var items = new int[] { 4,5,9,1,7,10,2,8,3,6};
-
+            //Choose our pivot
             Random _pivotRng = new Random();
             
             int pivotIndex = _pivotRng.Next(0, items.Length);
             
             Console.WriteLine($"About to sort {string.Join(",",items)}{Environment.NewLine}");
 
-            int postionedPivotIndex = positionPivot(items, 0, items.Length, pivotIndex);
+            int postionedPivotIndex = positionPivot(items, 0, items.Length - 1, pivotIndex);
 
             Console.WriteLine(string.Join(",",items));
 
